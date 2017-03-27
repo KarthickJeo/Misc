@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Welcome to My Flask App!</h2>
+<br>
+
+
+<h2>Click <a href="/sales">here</a> to know about the sales wing of Accion  </h2>
+<br>
+<h3>Posts:</h3>
+{% for post in posts %}
+  <strong>Title:</strong> {{ post.title }} <br>
+  <strong>Post:</strong> {{ post.description }} <br>
+<br>
+{% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}<marquee behavior="scroll" direction="left">
+
+The 4T used in the sales Team :
+
+T - Technology
+T - Team Size
+T - Type of engagement
+T - Timing
+Your scrolling text goes here</marquee>
+<h3>Current Deals in Pipeline:</h3>
+{% for post in sales %}
+  <strong>Company name:</strong> {{ post.Company_name }} <br>
+  <strong>Engagement type:</strong> {{ post.Engagement_type }} <br>
+  <strong>Current Stage:</strong> {{post.Current_Stage}} <br>
+  <strong>Sales Person Name:</strong> {{post.Sales_Person_Name}} <br>
+  <strong>Closing Date:</strong> {{post.Closing_Date}}
+<br>
+{% endfor %}
+
+
+{% endblock %}
